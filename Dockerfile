@@ -11,3 +11,12 @@ RUN wget http://repo.zabbix.com/zabbix/2.4/debian/pool/main/z/zabbix-release/zab
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   zabbix-agent    
+
+RUN mkdir /var/run/zabbix && \
+ chown -R zabbix:zabbix /var/run/zabbix && \
+ mkdir -p /etc/zabbix/zabbix_agentd.d && \
+ chown -R zabbix:zabbix /etc/zabbix
+
+VOLUME [ "/etc/zabbix" ]
+COPY start.sh /
+CMD [ "/start.sh"]
