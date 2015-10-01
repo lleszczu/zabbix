@@ -6,7 +6,7 @@ TO RUN DOCKERIZED ZABBIX AGENT:
 ```
 mkdir -p /etc/zabbix/zabbix_agentd.d
 ```
-2. Insert correct config file in /etc/zabbix directory. You can use example config ''zabbix_agentd.conf'', just provide correct server ip address in config file
+2. Insert correct config file in /etc/zabbix directory. You can use example config **zabbix_agentd.conf**, just provide correct server ip address in config file
 3. Set correct permissions for /etc/zabbix, zabbix user has UID=102, group has GID=105
 ```
 chown -R 102:105 /etc/zabbix
