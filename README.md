@@ -13,6 +13,6 @@ chown -R 102:105 /etc/zabbix
 ```
 4. Start a container.
 ```
-docker run -d --net=host --ipc=host --privileged=true  -v /dev:/dev -v /etc/zabbix:/etc/zabbix quay.io/lukaszl/zabbix 
+docker run -d --net=host --pid=host --ipc=host --privileged=true  -v /dev:/dev -v /etc/zabbix:/etc/zabbix quay.io/lukaszl/zabbix 
 ```
 5. Add zabbix agent to zabbix server through web UI.
