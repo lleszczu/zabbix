@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:15.10
 MAINTAINER lukasz.leszczuk@intel.com
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y wget
